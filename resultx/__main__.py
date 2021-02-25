@@ -1,7 +1,3 @@
-# resultx
-Automatically wraps exceptions and returned data in a result structure. Built for no reason other than we can. Allows decorating of any Python function. Loosely modelled off of Rust's `Result` enum. Example below:
-
-```python
 from resultx import result
 
 @result
@@ -90,13 +86,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-```
-
-```
-Result<class 'int'> (Valid) @ addr:1795018812304
-        as_err: cannot use as exception
-Result<class 'TypeError'> (Error) @ addr:1795028404320
-        as_val: cannot use as valid value
-        as_val_then: cannot use as valid value
-        as_vel_else: in lambda, e -> unsupported operand type(s) for +: 'int' and 'str'
-```
